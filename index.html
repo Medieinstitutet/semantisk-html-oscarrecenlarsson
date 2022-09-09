@@ -35,14 +35,15 @@
   <!-- This nav element shows up as untitles sections (aside, nav and ), do I need to do something about this? 
   https://stackoverflow.com/questions/7191348/preventing-nav-to-appear-as-untitled-section-on-html5-websites  
   -->
-  <aside>
-    <nav>
-      <a href="#aboutMeBookmark">About me</a>
-      <a href="#portfolioBookmark">Portfolio</a>
-      <a href="#mySkillsBookmark">My skills</a>
-      <a href="#contactBookmark">Contact</a>
-    </nav>
-  </aside>
+
+  <nav>
+    <ul>
+      <li><a href="#aboutMeBookmark">About me</a></li>
+      <li><a href="#portfolioBookmark">Portfolio</a></li>
+      <li><a href="#mySkillsBookmark">My skills</a></li>
+      <li><a href="#contactBookmark">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- Start section -->
@@ -64,9 +65,9 @@
     <!-- About Me section -->
     <section id="aboutMeBookmark">
       <h2>About me</h2>
-      <div>
+      <article>
         <h3>Who am I?</h3>
-        <p> I'm a 30 year old marketeer who, after turning 30, decided that it was time to follow the calling to code.
+        <p>I'm a 30 year old marketeer who, after turning 30, decided that it was time to follow the calling to code.
           When I'm not coding I enjoy activites like climbing, scuba diving and making music. I've put together 2
           thruths and 1 lie for you to get to know me a bit better, can you spot the lie?
         </p>
@@ -79,7 +80,7 @@
         <p>I'm currently studying a 2 year trade school program at Medieinstitutet to become a fully fledged blockchain
           developer. I also hold a Bachelor of Arts from Uppsala University where I majored in german and minored in
           philosophy and aesthetics.</p>
-      </div>
+      </article>
     </section>
 
     <!-- This is a chain animation to connect the different sections -->
@@ -90,21 +91,19 @@
     <!-- Portfolio section -->
     <section id="portfolioBookmark">
       <h2>Portfolio</h2>
-      <div>
+      <article>
         <h3>My first website</h3>
         <p>This is the first website that I built a couple of years ago to apply for marketing roles. It's an
           interactive page where you click on me to see previous jobs, on the book shelf for education and so on.
           Everything you see is clickable and invites the user to explore the page and learn more about me in the
           process.
-          <a href="https://oscarrecenlarsson.se/">Check out my first website here!</a>
+          <a href="https://oscarrecenlarsson.se/" target="_blank">Check out my first website here!</a>
         </p>
-      </div>
-      <div>
         <picture>
           <source media="(min-width: 465px)" srcset="/img/firstWebsiteHighRes.jpg"> <!-- Adds a high res pic -->
-          <img src="/img/firstWebsiteLowRes.jpg" alt="My first website"> <!-- Adds a low res pic -->
+          <img src="/img/firstWebsiteLowRes.jpg" alt="My first website" loading="lazy"> <!-- Adds a low res pic -->
         </picture>
-      </div>
+      </article>
     </section>
 
     <!-- This is a chain animation to connect the different sections -->
@@ -115,7 +114,7 @@
     <!-- My skills section -->
     <section id="mySkillsBookmark">
       <h2>My skills</h2>
-      <div>
+      <article>
         <h3>Experience from the marketing world</h3>
         <p>With 7 years of experience from working with global clients at international full service ad agencies I've
           picked up a few things regarding communications, design, project management and client service that I think
@@ -135,7 +134,7 @@
             <li>Haskell</li>
           </ul>
         </div>
-      </div>
+      </article>
     </section>
 
     <!-- This is a chain animation to connect the different sections -->
@@ -146,7 +145,7 @@
     <!-- Contact section -->
     <section id="contactBookmark">
       <h2>Contact</h2>
-      <div>
+      <article>
         <h3>Say hi!</h3>
         <p>If this website sparked your interest and you would like to get to know me even better, give me a call, shoot
           me a text or send me a mail and we'll take it from there!</p>
@@ -154,7 +153,7 @@
           <picture>
             <!-- <source media="(min-width: 650px)" srcset="/img/profilePictureHighRes.jpeg"> 
             <source media="(min-width: 465px)" srcset="/img/profilePicture.jpeg"> -->
-            <img src="/img/profilePictureLowRes.jpg" alt="Profile Picture">
+            <img src="/img/profilePictureLowRes.jpg" alt="Profile Picture" loading="lazy">
           </picture>
         </div>
         <h3>Contant information:</h3>
@@ -166,7 +165,7 @@
             Phone number: +46707111223
           </address>
         </div>
-      </div>
+      </article>
     </section>
   </main>
 
