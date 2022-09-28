@@ -1,0 +1,400 @@
+/* Imports
+   ========================================================================== */
+
+@forward 'globals';
+
+/* Global variables
+   ========================================================================== */
+
+$neon: #D1F075;
+$grey: #4D4D4D;
+$white: #FFFFFF;
+$backgroundColor: #b3b3b3;
+$mainFont: "roboto";
+$secondaryFont: "VT323";
+$tertiaryFont: "Share Tech Mono";
+
+/* Global functions
+   ========================================================================== */
+
+@function toRem($px) {
+    @return calc($px / 16px) * 1rem;
+}
+
+/* HTML elements
+   ========================================================================== */
+
+body {
+    position: relative;
+    font-family: $mainFont;
+    background-color: $backgroundColor;
+}
+
+span {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    position: relative;
+}
+
+article {
+    background-color: $grey;
+    max-width: toRem(500px);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: black;
+    font-family: $secondaryFont;
+    font-size: toRem(32px);
+    padding-left: toRem(16px);
+}
+
+h3 {
+    color: $neon;
+    font-family: $tertiaryFont;
+    font-size: toRem(22px);
+    padding-left: toRem(16px);
+    padding-top: toRem(16px);
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+    font-size: toRem(16px);
+    padding: toRem(16px);
+}
+
+ul {
+    margin-bottom: 0;
+    padding: toRem(16px);
+    padding-left: toRem(32px);
+}
+
+a {
+    color: $neon;
+
+    &:hover {
+        text-shadow: 0 0 toRem(0.5px) $neon;
+    }
+
+    &:active {
+        text-decoration-color: $white;
+    }
+}
+
+address {
+    padding-left: toRem(16px);
+    padding-bottom: toRem(16px);
+
+    &:first-child {
+        padding-top: toRem(16px);
+    }
+}
+
+footer {
+    background-color: $backgroundColor;
+    color: black;
+    text-align: center;
+    padding: toRem(16px);
+    margin-top: toRem(16px);
+
+    & p {
+        margin-top: 0;
+    }
+}
+
+/* Navigation
+   ========================================================================== */
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: black;
+    height: toRem(100px);
+    top: 0;
+    z-index: 2;
+
+    & ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: toRem(100px);
+
+        & li {
+            background-color: $neon;
+            height: auto;
+            width: toRem(200px);
+            text-align: center;
+            margin-right: toRem(5px);
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:active {
+                box-shadow: 2px 2px $grey;
+            }
+
+            & a {
+                display: block;
+                text-decoration: none;
+                font-family: $tertiaryFont;
+                font-size: toRem(16px);
+                color: black;
+                padding: 15px 0;
+
+                &:hover {
+                    text-shadow: 0 0 0.5px black;
+                }
+            }
+        }
+    }
+}
+
+/* Icons
+   ========================================================================== */
+
+.chainIconMobile {
+    color: black;
+    position: absolute;
+    right: toRem(20.5px);
+    top: toRem(20.5px);
+}
+
+.chainIconDesktop {
+    display: none;
+
+    & a {
+        color: black;
+    }
+}
+
+/* Main logo
+   ========================================================================== */
+h1 {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "oscar oscar recen"
+        "oscar oscar larsson"
+        "blockchainDeveloper blockchainDeveloper blockchainDeveloper";
+
+    align-items: center;
+    justify-items: center;
+    column-gap: toRem(10px);
+    row-gap: toRem(10px);
+}
+
+.oscar {
+    grid-area: oscar;
+    font-size: toRem(75px);
+    font-family: $tertiaryFont;
+    color: white;
+}
+
+.recen {
+    grid-area: recen;
+    font-size: toRem(35px);
+    justify-self: start;
+    align-self: end;
+    font-family: $secondaryFont;
+    line-height: 0.5;
+    color: $neon;
+}
+
+.larsson {
+    grid-area: larsson;
+    font-size: toRem(35px);
+    justify-self: start;
+    align-self: start;
+    font-family: $secondaryFont;
+    line-height: 0.5;
+    color: $neon;
+}
+
+.blockchainDeveloper {
+    grid-area: blockchainDeveloper;
+    font-size: toRem(27px);
+    align-self: start;
+    font-family: $tertiaryFont;
+    line-height: 0.5;
+    color: $grey;
+}
+
+/* Flex containers
+   ========================================================================== */
+
+.sectionFlexContainerStart {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    margin-bottom: toRem(-100px);
+}
+
+.sectionFlexContainer {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Images
+   ========================================================================== */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+picture {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: toRem(16px);
+}
+
+img {
+    max-width: toRem(300px);
+}
+
+.profilePic {
+    border-radius: 50%;
+}
+
+/* Transition 500 px
+   ========================================================================== */
+@media screen and (min-width: 500px) {
+    h2 {
+        padding-left: 0;
+    }
+
+    nav {
+        & ul {
+            & li {
+                & a {
+                    font-size: toRem(20px);
+                }
+            }
+        }
+    }
+}
+
+/* Desktop
+   ========================================================================== */
+@media screen and (min-width: 1000px) {
+
+    /* HTML elements */
+    article {
+        margin-bottom: toRem(100px);
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Navigation */
+    nav {
+        display: block;
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+
+        & ul {
+            margin: 0;
+            flex-direction: column;
+            width: 30%;
+            align-items: flex-end;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+
+            & li {
+                margin-bottom: toRem(10px);
+                margin-left: auto;
+                margin-right: auto;
+
+                &:last-child {
+                    margin-right: auto;
+                }
+
+                & a {
+                    font-size: toRem(22px);
+                }
+            }
+        }
+    }
+
+    /* Icons */
+    .chainIconMobile {
+        display: none;
+    }
+
+    .chainIconDesktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        position: absolute;
+        bottom: calc(10% - 65px);
+        align-self: center;
+        width: toRem(100px);
+        height: toRem(100px);
+    }
+
+    /* Main logo */
+    .oscar {
+        font-size: toRem(100px);
+    }
+
+    .recen {
+        font-size: toRem(45px);
+    }
+
+    .larsson {
+        font-size: toRem(45px);
+    }
+
+    .blockchainDeveloper {
+        font-size: toRem(35px);
+    }
+
+    /* Flex containers */
+    .sectionFlexContainer {
+        position: absolute;
+        top: 100vh;
+        color: $white;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        justify-content: flex-start;
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    .sectionFlexContainerStart {
+        width: 70%;
+        margin-left: 30%;
+    }
+}

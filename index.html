@@ -19,8 +19,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <!-- Links to style sheets-->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="dist/main.css">
   <!-- Imported Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono|VT323">
   <!-- Scripts -->
@@ -29,154 +28,150 @@
 </head>
 
 <body>
-
-  <!-- This nav element shows up as untitles sections (aside, nav and ), do I need to do something about this? 
-  https://stackoverflow.com/questions/7191348/preventing-nav-to-appear-as-untitled-section-on-html5-websites  
-  -->
+  <!-- Start section -->
+  <div class="sectionFlexContainerStart">
+    <section class="startSection">
+      <div aria-label="Oscar Recén Larsson">
+        <h1 aria-hidden="true">
+          <span class="oscar">OSCAR</span>
+          <span class="recen">RECÉN </span>
+          <span class="larsson">LARSSON</span>
+          <span class="blockchainDeveloper">BLOCKCHAIN DEVELOPER</span>
+        </h1>
+      </div>
+    </section>
+  </div>
 
   <nav>
     <ul>
+      <!-- <a href="#aboutMeBookmark">
+        <li>About me</li>
+      </a> -->
+
       <li><a href="#aboutMeBookmark">About me</a></li>
       <li><a href="#portfolioBookmark">Portfolio</a></li>
-      <li><a href="#mySkillsBookmark">My skills</a></li>
+      <li><a href="#SkillsBookmark">Skills</a></li>
       <li><a href="#contactBookmark">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- Start section -->
-    <section>
-      <div aria-label="Oscar Recén Larsson">
-        <h1 aria-hidden="true">
-          <span>OSCAR</span>
-          <span>RECÉN LARSSON</span>
-          <span>BLOCKCHAIN DEVELOPER</span>
-        </h1>
-      </div>
-    </section>
-
-    <!-- This is a chain animation to connect the different sections -->
-    <div class="chainDiv">
-      <i class="fa-solid fa-link fa-3x fa-flip chain" style="--fa-animation-duration: 5s;"></i>
-    </div>
-
-    <!-- About Me section -->
-    <section id="aboutMeBookmark">
-      <h2>About me</h2>
-      <article>
-        <h3>Who am I?</h3>
-        <p>I'm a 30 year old marketeer who, after turning 30, decided that it was time to follow the calling to code.
-          When I'm not coding I enjoy activites like climbing, scuba diving and making music. I've put together 2
-          thruths and 1 lie for you to get to know me a bit better, can you spot the lie?
-        </p>
-        <ul>
-          <li>I've sung in Puccini's Tosca and La Bohème at the Royal Opera House in Stockholm</li>
-          <li>I've met Lionel Richie</li>
-          <li>I've went sky diving</li>
-        </ul>
-        <h3>Education</h3>
-        <p>I'm currently studying a 2 year trade school program at Medieinstitutet to become a fully fledged blockchain
-          developer. I also hold a Bachelor of Arts from Uppsala University where I majored in german and minored in
-          philosophy and aesthetics.</p>
-      </article>
-    </section>
-
-    <!-- This is a chain animation to connect the different sections -->
-    <div class="chainDiv">
-      <i class="fa-solid fa-link fa-3x fa-flip chain" style="--fa-animation-duration: 5s;"></i>
-    </div>
-
-    <!-- Portfolio section -->
-    <section id="portfolioBookmark">
-      <h2>Portfolio</h2>
-      <article>
-        <h3>My first website</h3>
-        <p>This is the first website that I built a couple of years ago to apply for marketing roles. It's an
-          interactive page where you click on me to see previous jobs, on the book shelf for education and so on.
-          Everything you see is clickable and invites the user to explore the page and learn more about me in the
-          process.
-          <a href="https://oscarrecenlarsson.se/" target="_blank">Check out my first website here!</a>
-        </p>
-        <picture>
-          <source media="(min-width: 465px)" srcset="/img/firstWebsiteHighRes.jpg"> <!-- Adds a high res pic -->
-          <img src="/img/firstWebsiteLowRes.jpg" alt="My first website" loading="lazy"> <!-- Adds a low res pic -->
-        </picture>
-      </article>
-    </section>
-
-    <!-- This is a chain animation to connect the different sections -->
-    <div class="chainDiv">
-      <i class="fa-solid fa-link fa-3x fa-flip chain" style="--fa-animation-duration: 5s;"></i>
-    </div>
-
-    <!-- My skills section -->
-    <section id="mySkillsBookmark">
-      <h2>My skills</h2>
-      <article>
-        <h3>Experience from the marketing world</h3>
-        <p>With 7 years of experience from working with global clients at international full service ad agencies I've
-          picked up a few things regarding communications, design, project management and client service that I think
-          will prove very useful in my developer career.</p>
-
-        <h3>Tech stack</h3>
-        <p>Bearing in mind that I'm only just getting started,
-          here are some of the technologies that I'm currently diggin into:</p>
-        <div>
-          <!-- add CSS Grid -->
+    <div class="sectionFlexContainer">
+      <!-- About Me section -->
+      <section id="aboutMeBookmark">
+        <div class="chainIconMobile"><i class="fa-solid fa-link fa-3x fa-flip chain"
+            style="--fa-animation-duration: 5s;"></i></div>
+        <h2>About me</h2>
+        <article>
+          <h3>Who am I?</h3>
+          <p>I'm a 30 year old marketeer who, after turning 30, decided that it was time to follow the calling to
+            code.
+            When I'm not coding I enjoy activites like climbing, scuba diving and making music. I've put together 2
+            thruths and 1 lie for you to get to know me a bit better, can you spot the lie?
+          </p>
           <ul>
-            <li>Sass</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Solidity</li>
-            <li>Python</li>
-            <li>Haskell</li>
+            <li>I've sung in Puccini's Tosca and La Bohème at the Royal Opera House in Stockholm</li>
+            <li>I've met Lionel Richie</li>
+            <li>I've went sky diving</li>
           </ul>
-        </div>
-      </article>
-    </section>
+          <h3>Education</h3>
+          <p>I'm currently studying a 2 year trade school program at Medieinstitutet to become a fully fledged
+            blockchain
+            developer. I also hold a Bachelor of Arts from Uppsala University where I majored in german and minored in
+            philosophy and aesthetics.</p>
+        </article>
+        <div class="chainIconDesktop "><a href="#portfolioBookmark"><i class="fa-solid fa-link fa-3x fa-flip chain"
+              style="--fa-animation-duration: 5s;"></i></a></div>
+      </section>
 
-    <!-- This is a chain animation to connect the different sections -->
-    <div class="chainDiv">
-      <i class="fa-solid fa-link fa-3x fa-flip chain" style="--fa-animation-duration: 5s;"></i>
-    </div>
+      <!-- Portfolio section -->
+      <section id="portfolioBookmark">
+        <div class="chainIconMobile"><i class="fa-solid fa-link fa-3x fa-flip chain"
+            style="--fa-animation-duration: 5s;"></i></div>
+        <h2>Portfolio</h2>
+        <article>
+          <h3>My first website</h3>
+          <p>This is the first website that I built a couple of years ago to apply for marketing roles. It's an
+            interactive page where you click on me to see previous jobs, on the book shelf for education and so on.
+            Everything you see is clickable and invites the user to explore the page and learn more about me in the
+            process.
+            <a href="https://oscarrecenlarsson.se/" target="_blank">Check out my first website here!</a>
+          </p>
+          <picture>
+            <source media="(min-width: 465px)" srcset="/img/firstWebsiteHighRes.jpg"> <!-- Adds a high res pic -->
+            <img src="/img/firstWebsiteLowRes.jpg" alt="My first website" loading="lazy"> <!-- Adds a low res pic -->
+          </picture>
+        </article>
+        <div class="chainIconDesktop "><a href="#SkillsBookmark"><i class="fa-solid fa-link fa-3x fa-flip chain"
+              style="--fa-animation-duration: 5s;"></i></a></div>
+      </section>
 
-    <!-- Contact section -->
-    <section id="contactBookmark">
-      <h2>Contact</h2>
-      <article>
-        <h3>Say hi!</h3>
-        <p>If this website sparked your interest and you would like to get to know me even better, give me a call, shoot
-          me a text or send me a mail and we'll take it from there!</p>
-        <div>
+      <!-- My skills section -->
+      <section id="SkillsBookmark">
+        <div class="chainIconMobile"><i class="fa-solid fa-link fa-3x fa-flip chain"
+            style="--fa-animation-duration: 5s;"></i></div>
+        <h2>Skills</h2>
+        <article>
+          <h3>Experience from the marketing world</h3>
+          <p>With 7 years of experience from working with global clients at international full service ad agencies
+            I've
+            picked up a few things regarding communications, design, project management and client service that I
+            think
+            will prove very useful in my developer career.</p>
+
+          <h3>Tech stack</h3>
+          <p>Here are some of the technologies that I'm currently diggin into:</p>
+          <div>
+            <!-- add CSS Grid -->
+            <ul>
+              <li>Sass</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Solidity</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </article>
+        <div class="chainIconDesktop "><a href="#contactBookmark"><i class="fa-solid fa-link fa-3x fa-flip chain"
+              style="--fa-animation-duration: 5s;"></i></a></div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contactBookmark">
+        <div class="chainIconMobile"><i class="fa-solid fa-link fa-3x fa-flip chain"
+            style="--fa-animation-duration: 5s;"></i></div>
+        <h2>Contact</h2>
+        <article>
+          <h3>Say hi!</h3>
+          <p>If this website sparked your interest and you would like to get to know me even better, give me a call,
+            shoot me a text or send me a mail and we'll take it from there!
+          </p>
+
           <picture>
             <!-- <source media="(min-width: 650px)" srcset="/img/profilePictureHighRes.jpeg"> 
-            <source media="(min-width: 465px)" srcset="/img/profilePicture.jpeg"> -->
-            <img src="/img/profilePictureLowRes.jpg" alt="Profile Picture" loading="lazy">
+              <source media="(min-width: 465px)" srcset="/img/profilePicture.jpeg"> -->
+            <img class="profilePic" src="/img/profilePictureLowRes.jpg" alt="Profile Picture" loading="lazy">
           </picture>
-        </div>
-        <h3>Contant information:</h3>
+
+          <h3>Contant information:</h3>
+          <div>
+            <address>
+              Email: oscar.recenlarsson@gmail.com
+            </address>
+            <address>
+              Phone number: +46707555332
+            </address>
+          </div>
+        </article>
+      </section>
+
+      <footer>
         <div>
-          <address>
-            Email: oscar.recenlarsson@gmail.com
-          </address>
-          <address>
-            Phone number: +46707555332
-          </address>
+          <p>Designed & Built by Oscar Recén Larsson</p>
         </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- This is a chain animation to connect the different sections -->
-  <div class="chainDiv">
-    <i class="fa-solid fa-link fa-3x fa-flip chain" style="--fa-animation-duration: 5s;"></i>
-  </div>
-
-  <footer>
-    <div>
-      <p>Designed & Built by Oscar Recén Larsson</p>
+      </footer>
     </div>
-  </footer>
+  </main>
 
   <!-- js-scripts added by boilerplate -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
