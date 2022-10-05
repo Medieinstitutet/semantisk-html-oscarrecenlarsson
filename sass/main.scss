@@ -185,16 +185,15 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "oscar oscar recen"
         "oscar oscar larsson"
         "blockchainDeveloper blockchainDeveloper blockchainDeveloper";
-
     align-items: center;
     justify-items: center;
     column-gap: toRem(10px);
     row-gap: toRem(10px);
+    text-transform: uppercase;
 }
 
 .oscar {
