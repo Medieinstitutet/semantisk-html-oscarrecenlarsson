@@ -116,7 +116,7 @@ nav {
     background-color: black;
     height: toRem(100px);
     top: 0;
-    z-index: 2;
+    z-index: 10000 !important;
 
     & ul {
         padding: 0;
